@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">tcg</string>
+    <string name="mi_album">Mi álbum</string>
+    <string name="cantidad_cartas">%d cartas</string>
+    <string name="cargando_cartas">Cargando cartas…</string>
+    <string name="nav_album">Álbum</string>
+    <string name="nav_explorar">Explorar</string>
+    <string name="nav_chats">Chats</string>
+    <string name="nav_perfil">Perfil</string>
 </resources>
