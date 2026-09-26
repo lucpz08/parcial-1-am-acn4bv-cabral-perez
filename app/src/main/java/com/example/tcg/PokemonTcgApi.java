@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +30,22 @@ public class PokemonTcgApi {
     }
 
     public void fetchCards(int pageSize, CardsCallback callback) {
+        execute("?pageSize=" + pageSize, callback);
+    }
+
+    public void searchCards(String query, CardsCallback callback) {
+        try {
+            String q = URLEncoder.encode("name:" + query.trim() + "*", StandardCharsets.UTF_8.name());
+            execute("?q=" + q + "&pageSize=20", callback);
+        } catch (Exception e) {
+            callback.onError(e);
+        }
+    }
+
+    private void execute(String querySuffix, CardsCallback callback) {
         executor.execute(() -> {
             try {
-                List<Card> cards = requestCards(pageSize);
+                List<Card> cards = requestCards(querySuffix);
                 mainThread.post(() -> callback.onSuccess(cards));
             } catch (Exception e) {
                 mainThread.post(() -> callback.onError(e));
@@ -39,8 +53,8 @@ public class PokemonTcgApi {
         });
     }
 
-    private List<Card> requestCards(int pageSize) throws Exception {
-        URL url = new URL(CARDS_URL + "?pageSize=" + pageSize);
+    private List<Card> requestCards(String querySuffix) throws Exception {
+        URL url = new URL(CARDS_URL + querySuffix);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.setConnectTimeout(10000);

@@ -3,6 +3,13 @@
     <string name="mi_album">Mi álbum</string>
     <string name="cantidad_cartas">%d cartas</string>
     <string name="cargando_cartas">Cargando cartas…</string>
+    <string name="agregar_carta">+</string>
+    <string name="buscar_carta_titulo">Buscar carta</string>
+    <string name="buscar_carta_hint">Ej: Charizard, Pikachu…</string>
+    <string name="buscar">Buscar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="sin_resultados">Sin resultados</string>
+    <string name="error_buscar_carta">No se pudo buscar cartas</string>
     <string name="nav_album">Álbum</string>
     <string name="nav_explorar">Explorar</string>
     <string name="nav_chats">Chats</string>
