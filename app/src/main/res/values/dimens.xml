@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+
+    <dimen name="card_width">105dp</dimen>
+    <dimen name="card_height">147dp</dimen>
+
+    <dimen name="search_result_image_width">48dp</dimen>
+    <dimen name="search_result_image_height">64dp</dimen>
+    <dimen name="search_result_image_margin_end">12dp</dimen>
+
+    <dimen name="title_text_size">16sp</dimen>
+    <dimen name="subtitle_text_size">14sp</dimen>
+    <dimen name="search_result_text_size">16sp</dimen>
+    <dimen name="add_slot_text_size">28sp</dimen>
+</resources>

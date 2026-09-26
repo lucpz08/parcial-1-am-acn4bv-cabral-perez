@@ -2,6 +2,7 @@ package com.example.tcg;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -119,18 +120,21 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout fila = new LinearLayout(this);
         fila.setOrientation(LinearLayout.HORIZONTAL);
         fila.setGravity(Gravity.CENTER_VERTICAL);
-        fila.setPadding(0, dpToPx(8), 0, dpToPx(8));
+        int paddingVertical = getResources().getDimensionPixelSize(R.dimen.spacing_sm);
+        fila.setPadding(0, paddingVertical, 0, paddingVertical);
 
         ImageView imagen = new ImageView(this);
-        LinearLayout.LayoutParams imagenParams = new LinearLayout.LayoutParams(dpToPx(48), dpToPx(64));
-        imagenParams.setMarginEnd(dpToPx(12));
+        LinearLayout.LayoutParams imagenParams = new LinearLayout.LayoutParams(
+                getResources().getDimensionPixelSize(R.dimen.search_result_image_width),
+                getResources().getDimensionPixelSize(R.dimen.search_result_image_height));
+        imagenParams.setMarginEnd(getResources().getDimensionPixelSize(R.dimen.search_result_image_margin_end));
         imagen.setLayoutParams(imagenParams);
         imagen.setScaleType(ImageView.ScaleType.FIT_CENTER);
         Glide.with(this).load(card.imageUrl).into(imagen);
 
         TextView nombre = new TextView(this);
         nombre.setText(card.name);
-        nombre.setTextSize(16);
+        nombre.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.search_result_text_size));
 
         fila.addView(imagen);
         fila.addView(nombre);
@@ -176,8 +180,8 @@ public class MainActivity extends AppCompatActivity {
         TextView slotAgregar = new TextView(this);
         slotAgregar.setLayoutParams(crearLayoutParamsDeSlot());
         slotAgregar.setText(R.string.agregar_carta);
-        slotAgregar.setTextSize(28);
-        slotAgregar.setTextColor(getColor(android.R.color.darker_gray));
+        slotAgregar.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.add_slot_text_size));
+        slotAgregar.setTextColor(getColor(R.color.text_muted));
         slotAgregar.setGravity(Gravity.CENTER);
         slotAgregar.setBackgroundResource(R.drawable.add_slot_background);
         slotAgregar.setOnClickListener(v -> mostrarBuscadorDeCartas());
@@ -186,14 +190,10 @@ public class MainActivity extends AppCompatActivity {
 
     private GridLayout.LayoutParams crearLayoutParamsDeSlot() {
         GridLayout.LayoutParams params = new GridLayout.LayoutParams();
-        params.width = dpToPx(105);
-        params.height = dpToPx(147);
-        params.setMargins(dpToPx(4), dpToPx(4), dpToPx(4), dpToPx(4));
+        params.width = getResources().getDimensionPixelSize(R.dimen.card_width);
+        params.height = getResources().getDimensionPixelSize(R.dimen.card_height);
+        int margin = getResources().getDimensionPixelSize(R.dimen.spacing_xs);
+        params.setMargins(margin, margin, margin, margin);
         return params;
-    }
-
-    private int dpToPx(int dp) {
-        float density = getResources().getDisplayMetrics().density;
-        return Math.round(dp * density);
     }
 }

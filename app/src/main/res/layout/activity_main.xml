@@ -11,8 +11,8 @@
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#F3F4F9"
-        android:backgroundTint="#F3F4F9"
+        android:background="@color/background"
+        android:backgroundTint="@color/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,12 +22,12 @@
             android:id="@+id/miAlbumTextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/spacing_md"
+            android:layout_marginTop="@dimen/spacing_lg"
             android:text="@string/mi_album"
             android:textAlignment="textStart"
-            android:textColor="#000000"
-            android:textSize="16sp"
+            android:textColor="@color/text"
+            android:textSize="@dimen/title_text_size"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,9 +36,10 @@
             android:id="@+id/nroCartasTextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/spacing_xs"
             android:text="@string/cargando_cartas"
-            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/subtitle_text_size"
             app:layout_constraintStart_toStartOf="@+id/miAlbumTextview"
             app:layout_constraintTop_toBottomOf="@+id/miAlbumTextview" />
 
@@ -46,11 +47,11 @@
             android:id="@+id/ScrollView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="#FFFFFF"
+            android:layout_marginStart="@dimen/spacing_md"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:layout_marginEnd="@dimen/spacing_md"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:background="@color/surface"
             app:layout_constraintBottom_toTopOf="@+id/NavbarLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +68,7 @@
             android:id="@+id/NavbarLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
+            android:background="@color/surface"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/ScrollView"
@@ -84,7 +85,8 @@
                     android:id="@+id/albumButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/nav_album" />
+                    android:text="@string/nav_album"
+                    android:textColor="@color/primary" />
 
             </LinearLayout>
 
@@ -99,7 +101,8 @@
                     android:id="@+id/explorarButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/nav_explorar" />
+                    android:text="@string/nav_explorar"
+                    android:textColor="@color/text_muted" />
             </LinearLayout>
 
             <LinearLayout
@@ -113,7 +116,8 @@
                     android:id="@+id/chatsButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/nav_chats" />
+                    android:text="@string/nav_chats"
+                    android:textColor="@color/text_muted" />
             </LinearLayout>
 
             <LinearLayout
@@ -127,7 +131,8 @@
                     android:id="@+id/perfilButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/nav_perfil" />
+                    android:text="@string/nav_perfil"
+                    android:textColor="@color/text_muted" />
             </LinearLayout>
 
         </LinearLayout>
