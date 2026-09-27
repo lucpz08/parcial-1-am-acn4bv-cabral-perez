@@ -48,10 +48,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="@dimen/spacing_md"
-            android:layout_marginTop="@dimen/spacing_sm"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="@dimen/spacing_md"
-            android:layout_marginBottom="@dimen/spacing_md"
-            android:background="@color/surface"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/border_radius"
             app:layout_constraintBottom_toTopOf="@+id/NavbarLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,9 @@
                 android:id="@+id/cardsGridLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:columnCount="3" />
+                android:paddingTop="8dp"
+                app:columnCount="3"
+                app:useDefaultMargins="false" />
         </ScrollView>
 
         <LinearLayout
@@ -71,8 +73,8 @@
             android:background="@color/surface"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ScrollView"
-            app:layout_constraintStart_toStartOf="@+id/ScrollView">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
                 android:id="@+id/AlbumLayout"
@@ -85,6 +87,11 @@
                     android:id="@+id/albumButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/surface"
+                    android:drawableTop="@drawable/icon__lbum"
+                    android:gravity="center"
+                    android:padding="8dp"
                     android:text="@string/nav_album"
                     android:textColor="@color/primary" />
 
@@ -101,8 +108,14 @@
                     android:id="@+id/explorarButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/surface"
+                    android:drawableTop="@drawable/icon_explorar"
+                    android:gravity="center"
+                    android:padding="8dp"
                     android:text="@string/nav_explorar"
                     android:textColor="@color/text_muted" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -116,8 +129,14 @@
                     android:id="@+id/chatsButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/surface"
+                    android:drawableTop="@drawable/icon_chats"
+                    android:gravity="center"
+                    android:padding="8dp"
                     android:text="@string/nav_chats"
                     android:textColor="@color/text_muted" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -131,6 +150,11 @@
                     android:id="@+id/perfilButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/surface"
+                    android:drawableTop="@drawable/icon_perfil"
+                    android:gravity="center"
+                    android:padding="8dp"
                     android:text="@string/nav_perfil"
                     android:textColor="@color/text_muted" />
             </LinearLayout>

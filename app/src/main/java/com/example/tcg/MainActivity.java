@@ -26,7 +26,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int CANTIDAD_CARTAS_INICIALES = 12;
+    private static final int CANTIDAD_CARTAS_INICIALES = 8;
 
     private final PokemonTcgApi pokemonTcgApi = new PokemonTcgApi();
     private int cantidadDeCartas = 0;
@@ -190,10 +190,17 @@ public class MainActivity extends AppCompatActivity {
 
     private GridLayout.LayoutParams crearLayoutParamsDeSlot() {
         GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+
         params.width = getResources().getDimensionPixelSize(R.dimen.card_width);
         params.height = getResources().getDimensionPixelSize(R.dimen.card_height);
+
+        params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
+
         int margin = getResources().getDimensionPixelSize(R.dimen.spacing_xs);
         params.setMargins(margin, margin, margin, margin);
+
+        params.setGravity(Gravity.CENTER);
+
         return params;
     }
 }
