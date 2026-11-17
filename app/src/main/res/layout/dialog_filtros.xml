@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/spacing_lg"
+    android:paddingTop="@dimen/spacing_sm">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ordenar_por"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/ordenRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_md">
+
+        <RadioButton
+            android:id="@+id/ordenRecientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orden_recientes" />
+
+        <RadioButton
+            android:id="@+id/ordenPrecioMenor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orden_precio_menor" />
+
+        <RadioButton
+            android:id="@+id/ordenPrecioMayor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orden_precio_mayor" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/provincia"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/provinciaSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+</LinearLayout>

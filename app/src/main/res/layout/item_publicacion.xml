@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_sm"
+    android:background="@drawable/bg_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/intentFranja"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary" />
+
+    <ImageView
+        android:id="@+id/publicacionImagen"
+        android:layout_width="@dimen/listing_image_width"
+        android:layout_height="@dimen/listing_image_height"
+        android:layout_margin="@dimen/spacing_sm"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/spacing_sm">
+
+        <TextView
+            android:id="@+id/publicacionNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text"
+            android:textSize="@dimen/body_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/publicacionMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/caption_text_size" />
+
+        <TextView
+            android:id="@+id/publicacionVendedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text"
+            android:textSize="@dimen/caption_text_size" />
+
+        <TextView
+            android:id="@+id/publicacionProvincia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/caption_text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/publicacionPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_sm"
+        android:background="@drawable/bg_price_badge"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="3dp"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/caption_text_size"
+        android:textStyle="bold" />
+</LinearLayout>

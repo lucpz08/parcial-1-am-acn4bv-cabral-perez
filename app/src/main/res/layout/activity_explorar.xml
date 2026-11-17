@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ExplorarActivity">
+
+    <TextView
+        android:id="@+id/explorarTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_md"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:text="@string/explorar_titulo"
+        android:textColor="@color/text"
+        android:textSize="@dimen/h2_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/filtrarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_md"
+        android:background="@drawable/bg_chip"
+        android:clickable="true"
+        android:drawablePadding="@dimen/spacing_xs"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        android:text="@string/filtrar"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/caption_text_size"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_filter"
+        app:layout_constraintBottom_toBottomOf="@id/explorarTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/explorarTitulo" />
+
+    <EditText
+        android:id="@+id/busquedaPublicacionEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="@dimen/spacing_md"
+        android:layout_marginTop="@dimen/spacing_sm"
+        android:autofillHints=""
+        android:background="@drawable/bg_card"
+        android:hint="@string/buscar_publicacion_hint"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingHorizontal="@dimen/spacing_sm"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text_muted"
+        android:textSize="@dimen/body_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explorarTitulo" />
+
+    <LinearLayout
+        android:id="@+id/intentChipsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_md"
+        android:layout_marginTop="@dimen/spacing_sm"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/busquedaPublicacionEditText">
+
+        <TextView
+            android:id="@+id/chipTodas"
+            style="@style/Chip.Tcg"
+            android:text="@string/intent_todas" />
+
+        <TextView
+            android:id="@+id/chipVendo"
+            style="@style/Chip.Tcg"
+            android:text="@string/intent_vendo" />
+
+        <TextView
+            android:id="@+id/chipCambio"
+            style="@style/Chip.Tcg"
+            android:text="@string/intent_cambio" />
+
+        <TextView
+            android:id="@+id/chipBusco"
+            style="@style/Chip.Tcg"
+            android:text="@string/intent_busco" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/publicacionesScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_xs"
+        app:layout_constraintBottom_toTopOf="@id/NavbarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/intentChipsLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:paddingBottom="@dimen/spacing_xl">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ad_banner_height"
+                android:layout_marginVertical="@dimen/spacing_sm"
+                android:background="@drawable/bg_ad_banner"
+                android:gravity="center"
+                android:text="@string/espacio_publicitario"
+                android:textColor="@color/text_muted"
+                android:textSize="@dimen/caption_text_size" />
+
+            <LinearLayout
+                android:id="@+id/publicacionesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/sinPublicacionesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_xl"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sin_publicaciones"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/body_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:gravity="center"
+                    android:text="@string/sin_publicaciones_detalle"
+                    android:textColor="@color/text_muted"
+                    android:textSize="@dimen/body_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/NavbarLayout"
+        layout="@layout/navbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
