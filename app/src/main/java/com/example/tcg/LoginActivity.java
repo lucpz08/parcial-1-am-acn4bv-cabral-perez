@@ -49,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+        Sesion.iniciar(email);
+
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         intent.putExtra("usuario_email", email);
         startActivity(intent);

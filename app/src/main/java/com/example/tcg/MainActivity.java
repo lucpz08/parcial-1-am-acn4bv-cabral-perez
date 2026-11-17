@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        Navbar.configurar(this, R.id.albumButton);
         cargarAlbum();
     }
 
@@ -159,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
     private void actualizarContador() {
         TextView nroCartasTextview = findViewById(R.id.nroCartasTextview);
         nroCartasTextview.setText(getString(R.string.cantidad_cartas, cantidadDeCartas));
+        Sesion.setCantidadCartas(cantidadDeCartas);
     }
 
     private ImageView crearImageViewDeCarta(Card card) {
