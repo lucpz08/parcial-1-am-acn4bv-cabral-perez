@@ -14,4 +14,14 @@
     <string name="nav_explorar">Explorar</string>
     <string name="nav_chats">Chats</string>
     <string name="nav_perfil">Perfil</string>
+
+    <!-- Login -->
+    <string name="login_title">Riolup TCG</string>
+    <string name="login_subtitle">Iniciá sesión para continuar</string>
+    <string name="login_email">Correo electrónico</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_button">Ingresar</string>
+    <string name="login_register">Crear una cuenta</string>
+    <string name="login_error_empty">Completá todos los campos</string>
+    <string name="login_error_email">Ingresá un correo válido</string>
 </resources>
