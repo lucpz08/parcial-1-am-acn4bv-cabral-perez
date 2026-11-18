@@ -24,4 +24,73 @@
     <string name="login_register">Crear una cuenta</string>
     <string name="login_error_empty">Completá todos los campos</string>
     <string name="login_error_email">Ingresá un correo válido</string>
+
+    <!-- Explorar -->
+    <string name="explorar_titulo">Explorar</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="filtrar_con_cantidad">Filtrar (%d)</string>
+    <string name="buscar_publicacion_hint">Buscar por nombre de carta...</string>
+    <string name="intent_todas">Todas</string>
+    <string name="intent_vendo">Vendo</string>
+    <string name="intent_cambio">Cambio</string>
+    <string name="intent_busco">Busco</string>
+    <string name="espacio_publicitario">Espacio publicitario</string>
+    <string name="sin_publicaciones">No hay publicaciones</string>
+    <string name="sin_publicaciones_detalle">Probá cambiar los filtros o volvé más tarde.</string>
+    <string name="filtrar_y_ordenar">Filtrar y ordenar</string>
+    <string name="ordenar_por">Ordenar por</string>
+    <string name="orden_recientes">Recientes</string>
+    <string name="orden_precio_menor">Precio: menor</string>
+    <string name="orden_precio_mayor">Precio: mayor</string>
+    <string name="provincia">Provincia</string>
+    <string name="todas_las_provincias">Todas las provincias</string>
+    <string name="ver_resultados">Ver resultados</string>
+    <string name="precio">$%d</string>
+    <string name="carta_meta">%1$s · #%2$s</string>
+    <string name="publicacion_de">%1$s — %2$s</string>
+    <string name="sin_provincia">Sin provincia</string>
+
+    <!-- Perfil -->
+    <string name="username_formato">@%s</string>
+    <string name="sin_provincia_declarada">Sin provincia declarada</string>
+    <string name="stat_cartas">Cartas</string>
+    <string name="stat_resenas">Reseñas</string>
+    <string name="stat_miembro_desde">Miembro desde</string>
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="cerrar_sesion_confirmar">¿Querés cerrar sesión?</string>
+    <string name="resenas_recibidas">Reseñas recibidas</string>
+    <string name="sin_resenas">Todavía no tenés reseñas</string>
+    <string name="nombre">Nombre</string>
+    <string name="guardar">Guardar</string>
+    <string name="perfil_actualizado">Perfil actualizado</string>
+    <string name="error_nombre_vacio">El nombre no puede estar vacío</string>
+    <string name="proximamente">Próximamente</string>
+
+    <string-array name="provincias">
+        <item>Buenos Aires</item>
+        <item>CABA</item>
+        <item>Catamarca</item>
+        <item>Chaco</item>
+        <item>Chubut</item>
+        <item>Córdoba</item>
+        <item>Corrientes</item>
+        <item>Entre Ríos</item>
+        <item>Formosa</item>
+        <item>Jujuy</item>
+        <item>La Pampa</item>
+        <item>La Rioja</item>
+        <item>Mendoza</item>
+        <item>Misiones</item>
+        <item>Neuquén</item>
+        <item>Río Negro</item>
+        <item>Salta</item>
+        <item>San Juan</item>
+        <item>San Luis</item>
+        <item>Santa Cruz</item>
+        <item>Santa Fe</item>
+        <item>Santiago del Estero</item>
+        <item>Tierra del Fuego</item>
+        <item>Tucumán</item>
+    </string-array>
 </resources>

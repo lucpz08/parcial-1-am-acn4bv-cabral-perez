@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/NavbarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/AlbumLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/albumButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/surface"
+            android:drawableTop="@drawable/icon__lbum"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/nav_album"
+            android:textColor="@color/text_muted" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ExplorarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/explorarButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/surface"
+            android:drawableTop="@drawable/icon_explorar"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/nav_explorar"
+            android:textColor="@color/text_muted" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ChatsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/chatsButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/surface"
+            android:drawableTop="@drawable/icon_chats"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/nav_chats"
+            android:textColor="@color/text_muted" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PerfilLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/perfilButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/surface"
+            android:drawableTop="@drawable/icon_perfil"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/nav_perfil"
+            android:textColor="@color/text_muted" />
+    </LinearLayout>
+
+</LinearLayout>

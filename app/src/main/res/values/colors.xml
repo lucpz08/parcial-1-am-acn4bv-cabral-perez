@@ -7,4 +7,12 @@
     <color name="text_muted">#716C90</color>
     <color name="primary">#5B3DE8</color>
     <color name="white">#FFFFFF</color>
+    <color name="primary_muted">#EDE9FC</color>
+    <color name="primary_light">#8B6AF0</color>
+    <color name="danger">#E0405A</color>
+    <color name="gold">#E8A93D</color>
+    <color name="accent">#12B886</color>
+    <color name="white_translucent">#D9FFFFFF</color>
+    <color name="white_overlay">#33FFFFFF</color>
+    <color name="white_border">#99FFFFFF</color>
 </resources>
