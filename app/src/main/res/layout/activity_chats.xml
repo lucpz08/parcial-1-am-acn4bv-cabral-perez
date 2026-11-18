@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ChatsActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/chatsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/chats_title"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botón nueva conversación -->
+    <ImageButton
+        android:id="@+id/newChatButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_add"
+        android:padding="10dp"
+        android:backgroundTint="@color/primary"
+        android:background="@drawable/bg_chat_unread"
+        android:contentDescription="@string/chats_new"
+        app:layout_constraintTop_toTopOf="@id/chatsTitle"
+        app:layout_constraintBottom_toBottomOf="@id/chatsTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Filtros -->
+    <LinearLayout
+        android:id="@+id/chatsFiltersScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:paddingHorizontal="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/chatsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/filterAllButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:paddingHorizontal="2dp"
+            android:text="@string/chats_all"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary" />
+
+        <Button
+            android:id="@+id/filterTradesButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1.5"
+            android:minWidth="0dp"
+            android:layout_marginStart="4dp"
+            android:paddingHorizontal="2dp"
+            android:text="@string/chats_trades"
+            android:textSize="11sp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/filterClaimsButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:layout_marginStart="4dp"
+            android:paddingHorizontal="2dp"
+            android:text="@string/chats_claims"
+            android:textSize="11sp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/filterSalesButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:layout_marginStart="4dp"
+            android:paddingHorizontal="2dp"
+            android:text="@string/chats_sales"
+            android:textSize="11sp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <!-- Lista de conversaciones -->
+    <ScrollView
+        android:id="@+id/chatsScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/border_radius"
+        android:fillViewport="false"
+        android:elevation="4dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/chatsFiltersScroll"
+        app:layout_constraintBottom_toTopOf="@id/NavbarLayout"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/conversationsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+    <!-- Navbar -->
+    <include
+        android:id="@+id/NavbarLayout"
+        layout="@layout/navbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

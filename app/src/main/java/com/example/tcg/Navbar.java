@@ -18,26 +18,46 @@ public final class Navbar {
     private Navbar() {
     }
 
+
     public static void configurar(Activity activity, int botonActivoId) {
         for (int id : BOTONES) {
             Button boton = activity.findViewById(id);
             boolean activo = id == botonActivoId;
-            boton.setTextColor(activity.getColor(activo ? R.color.primary : R.color.text_muted));
+
+            boton.setTextColor(activity.getColor(
+                    activo ? R.color.primary : R.color.text_muted
+            ));
 
             if (activo) {
                 boton.setOnClickListener(null);
+
             } else if (id == R.id.albumButton) {
-                boton.setOnClickListener(v -> navegar(activity, MainActivity.class));
+                boton.setOnClickListener(v ->
+                        navegar(activity, MainActivity.class));
+
             } else if (id == R.id.explorarButton) {
-                boton.setOnClickListener(v -> navegar(activity, ExplorarActivity.class));
+                boton.setOnClickListener(v ->
+                        navegar(activity, ExplorarActivity.class));
+
+            } else if (id == R.id.chatsButton) {
+                boton.setOnClickListener(v ->
+                        navegar(activity, ChatsActivity.class));
+
             } else if (id == R.id.perfilButton) {
-                boton.setOnClickListener(v -> navegar(activity, PerfilActivity.class));
+                boton.setOnClickListener(v ->
+                        navegar(activity, PerfilActivity.class));
+
             } else {
                 boton.setOnClickListener(v ->
-                        Toast.makeText(activity, R.string.proximamente, Toast.LENGTH_SHORT).show());
+                        Toast.makeText(
+                                activity,
+                                R.string.proximamente,
+                                Toast.LENGTH_SHORT
+                        ).show());
             }
         }
     }
+
 
     private static void navegar(Activity origen, Class<? extends Activity> destino) {
         Intent intent = new Intent(origen, destino);
