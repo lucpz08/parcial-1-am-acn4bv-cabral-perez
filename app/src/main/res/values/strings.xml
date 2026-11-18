@@ -93,4 +93,17 @@
         <item>Tierra del Fuego</item>
         <item>Tucumán</item>
     </string-array>
+
+    <!-- Chats -->
+    <string name="chats_title">Chats</string>
+    <string name="chats_all">Todos</string>
+    <string name="chats_trades">Intercambios</string>
+    <string name="chats_claims">Claims</string>
+    <string name="chats_sales">Ventas</string>
+    <string name="chats_empty">No hay conversaciones</string>
+    <string name="chats_new">Nueva conversación</string>
+
+    <!-- Conversación -->
+    <string name="conversation_message_hint">Escribí un mensaje...</string>
+    <string name="conversation_send">Enviar</string>
 </resources>

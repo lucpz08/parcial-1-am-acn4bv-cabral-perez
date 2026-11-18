@@ -19,12 +19,11 @@
             android:name=".LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <!-- Pantalla del álbum -->
@@ -43,7 +42,14 @@
         <activity
             android:name=".PerfilActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".ChatsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ConversationActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
