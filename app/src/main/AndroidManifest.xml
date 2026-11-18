@@ -33,6 +33,17 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
+        <!-- Pantalla Explorar (publicaciones) -->
+        <activity
+            android:name=".ExplorarActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pantalla Perfil -->
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
